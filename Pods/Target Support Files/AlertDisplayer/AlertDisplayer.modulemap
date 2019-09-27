@@ -1,0 +1,6 @@
+framework module AlertDisplayer {
+  umbrella header "AlertDisplayer-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jIN-1i-1NT">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alert Displayer View Controller-->
+        <scene sceneID="rZB-Xa-q3T">
+            <objects>
+                <viewController id="jIN-1i-1NT" customClass="AlertDisplayerViewController" customModule="EnergyKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sMO-cl-OdN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6CX-Bj-qAK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDy-qQ-xdb" customClass="AlertDisplayer" customModule="AlertDisplayer">
+                                <rect key="frame" x="57" y="323" width="300" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" placeholder="YES" id="D8T-pT-2rM"/>
+                                    <constraint firstAttribute="height" constant="250" placeholder="YES" id="dqa-XH-xUs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6CX-Bj-qAK" firstAttribute="top" secondItem="sMO-cl-OdN" secondAttribute="top" id="3Bi-b3-fUX"/>
+                            <constraint firstItem="GDy-qQ-xdb" firstAttribute="centerY" secondItem="sMO-cl-OdN" secondAttribute="centerY" id="83Q-31-NPD"/>
+                            <constraint firstItem="GDy-qQ-xdb" firstAttribute="centerX" secondItem="sMO-cl-OdN" secondAttribute="centerX" id="KL7-W2-djP"/>
+                            <constraint firstAttribute="trailing" secondItem="6CX-Bj-qAK" secondAttribute="trailing" id="PYK-JR-RWh"/>
+                            <constraint firstItem="6CX-Bj-qAK" firstAttribute="leading" secondItem="sMO-cl-OdN" secondAttribute="leading" id="hHz-kv-Su2"/>
+                            <constraint firstAttribute="bottom" secondItem="6CX-Bj-qAK" secondAttribute="bottom" id="zZs-tp-rMd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lPD-5a-gSs"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertDisplayer" destination="GDy-qQ-xdb" id="z8D-o6-y65"/>
+                        <segue destination="Bni-9f-QSa" kind="showDetail" identifier="loginSegue" id="9O4-mk-vh7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZoJ-eM-Ikg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214" y="48"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="Wdw-Ke-nnf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="Bni-9f-QSa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uMQ-kx-amY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318" y="48"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_EnergyKeeperTests {
+  umbrella header "Pods-EnergyKeeperTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
