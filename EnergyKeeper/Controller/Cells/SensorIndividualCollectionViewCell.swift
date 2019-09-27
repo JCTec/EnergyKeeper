@@ -32,6 +32,7 @@ class SensorIndividualCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    // MARK: - Set Up
     override func awakeFromNib() {
         mainTitle.textColor = .lightGray
         

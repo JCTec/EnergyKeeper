@@ -51,6 +51,7 @@ class SensorsCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    // MARK: - Set up
     override func awakeFromNib() {
         forwardImage.clipsToBounds = true
         forwardImage.tintColor = .black
@@ -75,6 +76,7 @@ class SensorsCollectionViewCell: UICollectionViewCell {
     }
 }
 
+// MARK: - UICollectionViewDataSource
 extension SensorsCollectionViewCell: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -93,7 +95,7 @@ extension SensorsCollectionViewCell: UICollectionViewDataSource{
     
 }
 
-
+// MARK: - UICollectionViewDelegateFlowLayout
 extension SensorsCollectionViewCell: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -102,7 +104,7 @@ extension SensorsCollectionViewCell: UICollectionViewDelegateFlowLayout{
     
 }
 
-
+// MARK: - UICollectionViewDelegate
 extension SensorsCollectionViewCell: UICollectionViewDelegate{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

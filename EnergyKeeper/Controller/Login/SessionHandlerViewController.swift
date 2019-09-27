@@ -14,6 +14,7 @@ class SessionHandlerViewController: UIViewController {
     private var notLogin: String = "notLogin"
     private var didLogin: String = "didLogin"
     
+    // MARK: - Set Up
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
@@ -39,15 +40,5 @@ class SessionHandlerViewController: UIViewController {
         loading.isHidden = true
         loading.hidesWhenStopped = true
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

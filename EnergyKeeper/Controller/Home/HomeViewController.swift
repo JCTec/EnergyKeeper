@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
     
     var info = [Sensor]()
 
+    // MARK: - set Up
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -37,6 +38,7 @@ class HomeViewController: UIViewController {
         collectionView.reloadData()
     }
     
+    // MARK: - Private Funcs
     private func setUp(){
         navigationController?.setNavigationBarHidden(false, animated: false)
         
@@ -65,15 +67,13 @@ class HomeViewController: UIViewController {
         return [user, bell]
     }
     
+    // MARK: - Actions
     @objc func userMenu(){
         alertDisplayer.performSegue(on: self)
     }
 
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
         if segue.destination is AlertDisplayerViewController{
             let vc = segue.destination as! AlertDisplayerViewController
             
@@ -83,7 +83,6 @@ class HomeViewController: UIViewController {
             vc.rightText = "Ok"
             vc.negative = false
         }
-        // Pass the selected object to the new view controller.
     }
 
 

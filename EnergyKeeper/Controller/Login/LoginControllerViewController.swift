@@ -17,6 +17,7 @@ class LoginControllerViewController: UIViewController {
     
     private var homeSegue: String = "homeSegue"
     
+    // MARK: - Set Up
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +37,7 @@ class LoginControllerViewController: UIViewController {
         setShadow(to: loginButton, true, 5.0)
     }
     
+    // MARK: - Private Funcs
     private func email() -> String{
         return emailField.text?.trim() ?? ""
     }
@@ -59,6 +61,7 @@ class LoginControllerViewController: UIViewController {
         return true
     }
     
+    // MARK: - Actions
     @IBAction func didSelectLogin(_ sender: Any) {
         dismissKeyboard()
 
@@ -87,15 +90,11 @@ class LoginControllerViewController: UIViewController {
     }
     
      // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
         let transition = CATransition()
         transition.duration = 0.4
         transition.type = CATransitionType.push
         transition.subtype = CATransitionSubtype.fromRight
         view.window!.layer.add(transition, forKey: kCATransition)
-     // Pass the selected object to the new view controller.
      }
 }
