@@ -38,15 +38,10 @@ class AlertDisplayerViewController: UIViewController {
         alertDisplayer.decorations = EKColors.Blue.flat
         alertDisplayer.textColor = .black
         
-        if negative {
-            alertDisplayer.configureWith(self, 350, 120, #imageLiteral(resourceName: "exit"))
-            
+        if image == nil{
+            alertDisplayer.configureWith(self, 350, 190)
         }else{
-            if image == nil{
-                alertDisplayer.configureWith(self, 350, 190)
-            }else{
-                alertDisplayer.configureWith(self, 350, 250, UIImage())
-            }
+            alertDisplayer.configureWith(self, 350, 250, UIImage())
         }
         
         // Do any additional setup after loading the view.
@@ -116,6 +111,7 @@ extension AlertDisplayerViewController: AlertDisplayerDelegate{
     
     func didPressCancel() {
         print("didPressCancelDelegate")
+        dismiss(animated: true, completion: nil)
     }
     
     func didSelectMainImage() {
