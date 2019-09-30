@@ -11,5 +11,5 @@ import Foundation
 struct User: Codable {
     let fullname: String!
     let name: String!
-    let id: String!
+    let id: String?
 }

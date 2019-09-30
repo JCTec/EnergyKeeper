@@ -59,7 +59,7 @@ class UserAPI {
                 try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
                 let login = try JSONDecoder().decode(User.self, from: data!)
                 
-                if keep{
+                if keep && login.id != nil{
                     self.save(email: email)
                     let _ = KeychainWrapper.standard.set(email, forKey: "email-EnergyKeeper")
                     let _ = KeychainWrapper.standard.set(password, forKey: "password-EnergyKeeper")

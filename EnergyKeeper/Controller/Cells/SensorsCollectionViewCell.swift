@@ -25,7 +25,7 @@ class SensorsCollectionViewCell: UICollectionViewCell {
         return "Sensors".loadNib()!
     }()
     
-    var delegate: SensorsCollectionViewCellDelegate?
+    weak var delegate: SensorsCollectionViewCellDelegate?
     var indexPath: IndexPath!
     var messures = [PowerMesure]()
 
